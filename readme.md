@@ -1,3 +1,3 @@
-# Teknologi 1 kompendie KEA forår 2023
+# SWA kompendie efterår 2024
 
-Github Pages: https://techkea.github.io/f23/ 
+Github Pages: https://ITAKEA.github.io/e24/ 
