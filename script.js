@@ -6,35 +6,35 @@ $().ready(function() {
 	$(".markdown-body").append("<div style='text-align:center; margin-top:60px; color:#888888'><small>Kompendie - Software Arkitektur & Cloud efterår 2024 - clbo@kea.dk - licence: MIT</small></div>");
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
-  // Opret en ny container til layout
-  const container = document.createElement("div");
-  container.style.display = "flex";
-  container.style.justifyContent = "space-around";
-  container.style.alignItems = "flex-start";
+  // Opret en ny container med flex layout
+  const flexContainer = document.createElement("div");
+  flexContainer.style.display = "flex";
+  flexContainer.style.justifyContent = "space-around"; // Fordeler pladsen omkring elementerne
+  flexContainer.style.alignItems = "flex-start"; // Starter elementerne øverst
+  flexContainer.style.flexWrap = "wrap"; // Sørger for, at elementerne kan ombrydes ved behov
 
-  // Find de oprindelige sektioner ved hjælp af deres h2 id'er
+  // Find de eksisterende elementer for Softwarearkitektur og Cloud
   const softwareHeader = document.getElementById("softwarearkitektur");
+  const softwareList = softwareHeader.nextElementSibling; // Antager at <ol> er det næste element
+
   const cloudHeader = document.getElementById("cloud");
+  const cloudList = cloudHeader.nextElementSibling; // Antager at <ol> er det næste element
 
-  // Antag, at indholdet, der skal arrangeres, er det næste element (eller en bestemt gruppe af elementer) efter disse h2's
-  // For dette eksempel, lad os bare klone h2 elementerne som en demonstration
-  const softwareClone = softwareHeader.cloneNode(true);
-  const cloudClone = cloudHeader.cloneNode(true);
-
-  // Opret divs for at indeholde hver sektion's indhold
+  // Opret en ny <div> for hver sektion og tilføj overskriften og listen til den
   const softwareDiv = document.createElement("div");
-  softwareDiv.appendChild(softwareClone);
+  softwareDiv.appendChild(softwareHeader);
+  softwareDiv.appendChild(softwareList);
 
   const cloudDiv = document.createElement("div");
-  cloudDiv.appendChild(cloudClone);
+  cloudDiv.appendChild(cloudHeader);
+  cloudDiv.appendChild(cloudList);
 
-  // Tilføj sektionerne til den nye container
-  container.appendChild(softwareDiv);
-  container.appendChild(cloudDiv);
+  // Tilføj de to nye <div> elementer til flex containeren
+  flexContainer.appendChild(softwareDiv);
+  flexContainer.appendChild(cloudDiv);
 
-  // Tilføj den nye container til et specifikt punkt i dokumentet
-  // Dette er et eksempel, tilpas til din faktiske brug
-  document.body.appendChild(container);
+  // Tilføj den nye container til body (eller et specifikt element, hvis du foretrækker)
+  document.body.insertBefore(flexContainer, document.body.firstChild);
 });
+
