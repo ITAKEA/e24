@@ -1,11 +1,10 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="script.js"></script>
 
-<div style="text-align:right">
-<br><br>
-</div>
 #  Lektionsoverblik
+
 <div id='content'></div>
+
 ## Softwarearkitektur
 1. [Introduktion til Softwarearktiektur]() 
 1. [Introduktion til Python - uge 1]() 
