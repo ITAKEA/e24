@@ -4,33 +4,47 @@
 <div style="text-align:right">
 <br><br>
 </div>
+<table>
+    <th>
+        <td>Softwarearkitektur </td>
+        <td>Cloud</td>
+    </th>
+    <tr>
+        <td>
 
-| Softwarearkitektur | Cloud |
-|------------|---------------|
-|1. [Introduktion til Softwarearktiektur]() 
-1. [Introduktion til Python - uge 1]() 
-1. [Introduktion til Python - uge 2.1]() 
-1. [Introduktion til Python - uge 2.2]() 
-1. [Data formater]() 
-1. []() 
-1. []() 
-1. []() 
-1. []() 
-1. []() 
-1. []()  
-1. []() 
-1. []() 
-1. []() 
-1. []() 
-1. []() 
-1. []() 
-1. []() 
-1. []() 
-1. []() 
-1. [Eksamensprojekt]() 
-1. [Eksamensprojekt]() 
-1. [Eksamensprojekt]() 
-1. [Eksamensprojekt]() 
-|   1. test
-    1. test2 
-|
+            1. [Introduktion til Softwarearktiektur]() 
+            1. [Introduktion til Python - uge 1]() 
+            1. [Introduktion til Python - uge 2.1]() 
+            1. [Introduktion til Python - uge 2.2]() 
+            1. [Data formater]() 
+            1. []() 
+            1. []() 
+            1. []() 
+            1. []() 
+            1. []() 
+            1. []()  
+            1. []() 
+            1. []() 
+            1. []() 
+            1. []() 
+            1. []() 
+            1. []() 
+            1. []() 
+            1. []() 
+            1. []() 
+            1. [Eksamensprojekt]() 
+            1. [Eksamensprojekt]() 
+            1. [Eksamensprojekt]() 
+            1. [Eksamensprojekt]() 
+
+        </td>
+        <td>
+            
+           1. test
+           1. test2 
+
+</td>
+    </tr>
+
+</table>
+
