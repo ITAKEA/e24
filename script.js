@@ -6,6 +6,9 @@ $().ready(function() {
 	$(".markdown-body").append("<div style='text-align:center; margin-top:60px; color:#888888'><small>Kompendie - Software Arkitektur & Cloud efterår 2024 - clbo@kea.dk - licence: MIT</small></div>");
 });
 
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   // Opret en ny container til layout
   const container = document.createElement("div");
