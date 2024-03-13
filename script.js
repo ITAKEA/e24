@@ -6,8 +6,6 @@ $().ready(function() {
 	$(".markdown-body").append("<div style='text-align:center; margin-top:60px; color:#888888'><small>Kompendie - Software Arkitektur & Cloud efterår 2024 - clbo@kea.dk - licence: MIT</small></div>");
 });
 
-// Dette er en kommentar
-
 
 document.addEventListener("DOMContentLoaded", function() {
   // Opret en ny container til layout
@@ -16,30 +14,27 @@ document.addEventListener("DOMContentLoaded", function() {
   container.style.justifyContent = "space-around";
   container.style.alignItems = "flex-start";
 
-  // Find de oprindelige lister og deres overskrifter
+  // Find de oprindelige sektioner ved hjælp af deres h2 id'er
   const softwareHeader = document.getElementById("softwarearkitektur");
-  const softwareList = softwareHeader.nextElementSibling;
-
   const cloudHeader = document.getElementById("cloud");
-  const cloudList = cloudHeader.nextElementSibling;
 
-  // Opret nye divs for at holde hvert sæt af h2 + liste
+  // Antag, at indholdet, der skal arrangeres, er det næste element (eller en bestemt gruppe af elementer) efter disse h2's
+  // For dette eksempel, lad os bare klone h2 elementerne som en demonstration
+  const softwareClone = softwareHeader.cloneNode(true);
+  const cloudClone = cloudHeader.cloneNode(true);
+
+  // Opret divs for at indeholde hver sektion's indhold
   const softwareDiv = document.createElement("div");
-  softwareDiv.appendChild(softwareHeader.cloneNode(true)); // Klon og tilføj h2
-  softwareDiv.appendChild(softwareList.cloneNode(true)); // Klon og tilføj liste
+  softwareDiv.appendChild(softwareClone);
 
   const cloudDiv = document.createElement("div");
-  cloudDiv.appendChild(cloudHeader.cloneNode(true)); // Klon og tilføj h2
-  cloudDiv.appendChild(cloudList.cloneNode(true)); // Klon og tilføj liste
+  cloudDiv.appendChild(cloudClone);
 
-  // Tilføj de nye divs til containeren
+  // Tilføj sektionerne til den nye container
   container.appendChild(softwareDiv);
   container.appendChild(cloudDiv);
 
-  // Erstat de oprindelige elementer med den nye container
-  document.body.insertBefore(container, softwareHeader);
-  document.body.removeChild(softwareHeader);
-  document.body.removeChild(softwareList);
-  document.body.removeChild(cloudHeader);
-  document.body.removeChild(cloudList);
+  // Tilføj den nye container til et specifikt punkt i dokumentet
+  // Dette er et eksempel, tilpas til din faktiske brug
+  document.body.appendChild(container);
 });
