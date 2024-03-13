@@ -13,7 +13,7 @@ $(document).ready(function() {
     // Opretter en ny container med flex layout
     const flexContainer = document.createElement("div");
     flexContainer.style.display = "flex";
-    flexContainer.style.justifyContent = "space-around"; // Fordeler pladsen omkring elementerne
+    flexContainer.style.justifyContent = "space-start"; // Fordeler pladsen omkring elementerne
     flexContainer.style.alignItems = "flex-start"; // Starter elementerne øverst
     flexContainer.style.flexWrap = "wrap"; // Sørger for, at elementerne kan ombrydes ved behov
 
