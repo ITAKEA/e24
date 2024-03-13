@@ -5,10 +5,10 @@
 <br><br>
 </div>
 <table>
-    <th>
-        <td>Softwarearkitektur </td>
-        <td>Cloud</td>
-    </th>
+    <tr>
+        <th>Softwarearkitektur </th>
+        <th>Cloud</th>
+    </tr>
     <tr>
         <td>
 
