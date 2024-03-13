@@ -7,15 +7,22 @@ $().ready(function() {
 	$(".markdown-body").append("<div style='text-align:center; margin-top:60px; color:#888888'><small>Kompendie - Software Arkitektur & Cloud efterår 2024 - clbo@kea.dk - licence: MIT</small></div>");
 });
 
-
 $(document).ready(function() {
 
     // Opretter en ny container med flex layout
     const flexContainer = document.createElement("div");
     flexContainer.style.display = "flex";
-    flexContainer.style.justifyContent = "center"; // Fordeler pladsen omkring elementerne
-    flexContainer.style.alignItems = "flex-start"; // Starter elementerne øverst
-    flexContainer.style.flexWrap = "wrap"; // Sørger for, at elementerne kan ombrydes ved behov
+    flexContainer.style.width = "100%";
+
+    // Opretter to indre containere for at opdele layoutet
+    const leftContainer = document.createElement("div");
+    leftContainer.style.flex = "1";
+
+    const rightContainer = document.createElement("div");
+    rightContainer.style.flex = "1";
+    rightContainer.style.display = "flex";
+    rightContainer.style.justifyContent = "center";
+    rightContainer.style.alignItems = "flex-start";
 
     // Finder de eksisterende elementer for Softwarearkitektur og Cloud
     const softwareHeader = document.getElementById("softwarearkitektur");
@@ -24,25 +31,22 @@ $(document).ready(function() {
     const cloudHeader = document.getElementById("cloud");
     const cloudList = cloudHeader.nextElementSibling;
 
-    // Opretter nye <div>s for at indeholde hver sektions indhold
-    const softwareDiv = document.createElement("div");
-    softwareDiv.appendChild(softwareHeader.cloneNode(true)); // Kloner og tilføjer h2
-    softwareDiv.appendChild(softwareList.cloneNode(true)); // Kloner og tilføjer ol
+    // Tilføjer Softwarearkitektur til venstre container
+    leftContainer.appendChild(softwareHeader);
+    leftContainer.appendChild(softwareList);
 
-    const cloudDiv = document.createElement("div");
-    cloudDiv.appendChild(cloudHeader.cloneNode(true)); // Kloner og tilføjer h2
-    cloudDiv.appendChild(cloudList.cloneNode(true)); // Kloner og tilføjer ol
+    // Opretter en ny <div> for Cloud-indholdet for at centrere det inden i højre container
+    const cloudContent = document.createElement("div");
+    cloudContent.appendChild(cloudHeader);
+    cloudContent.appendChild(cloudList);
 
-    // Tilføjer de to nye <div> elementer til flex containeren
-    flexContainer.appendChild(softwareDiv);
-    flexContainer.appendChild(cloudDiv);
+    rightContainer.appendChild(cloudContent);
 
-    // Fjerner de originale elementer
-    softwareHeader.remove();
-    softwareList.remove();
-    cloudHeader.remove();
-    cloudList.remove();
+    // Tilføjer begge containere til den ydre flex container
+    flexContainer.appendChild(leftContainer);
+    flexContainer.appendChild(rightContainer);
 
-    // Finder <div> med id 'content' og tilføjer den nye container til det
-    $('#content').append(flexContainer);
+    // Tilføjer den ydre container til <div> med id 'content'
+    document.getElementById('content').appendChild(flexContainer);
 });
+
