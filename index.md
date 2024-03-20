@@ -4,7 +4,7 @@
 <div id='content'></div>
 
 ## Softwarearkitektur
-1. [Introduktion til Softwarearktiektur]() 
+1. [Introduktion til Softwarearktiektur, Cloud og andre fag]() 
 1. [Introduktion til Python - uge 1]() 
 1. [Introduktion til Python - uge 2.1]() 
 1. [Introduktion til Python - uge 2.2]() 
@@ -30,5 +30,5 @@
 1. [Eksamensprojekt]() 
 
 ## Cloud            
-1. test
-1. test2 
+1. Introduktion
+1. Iaas, Paas & Saas 
